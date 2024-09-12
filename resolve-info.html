@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Form Example</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/_fonts.css" />
+    <link rel="stylesheet" href="./scss/_fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Page">
+      <!-- once the button is selected this dialog opens in the UI -->
+      <div class="DialogContainer">
+        <div class="Dialog">
+          <h1 class="Dialog-title">
+            Resolve Data Issue: <code>${dataset-1}</code>
+          </h1>
+          <div class="Dialog-content">
+            <p>You have reported a data issue from this dataset.</p>
+            <!-- <p>
+              If you no longer have a data issue then click Resolve to let us
+              know.
+            </p>
+            <p>
+              If you no longer have a data issue and do not require asssitance
+              then click Resolve.
+            </p> -->
+            <p>
+              Click Resolve if your data issue is solved and you no longer
+              require asssitance.
+            </p>
+          </div>
+          <div class="ButtonGroup Dialog-buttons">
+            <a class="Button Dialog-button" type="button" href="index.html">
+              <i class="Icon fas fa-times"></i>Close
+            </a>
+
+            <button class="Button Dialog-button" type="button">
+              <i class="Icon fas fa-check"></i>Resolve
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

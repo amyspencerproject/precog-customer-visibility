@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Form Example</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/_fonts.css" />
+    <link rel="stylesheet" href="./scss/_fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Page">
+      <!-- once the button is selected this dialog opens in the UI -->
+      <div class="DialogContainer">
+        <div class="Dialog">
+          <h1 class="Dialog-title">Data log: {{DataSet 1}}</h1>
+          <div class="Dialog-content">
+            <div class="data-log-container">
+              <div>
+                <h3>Load Start</h3>
+                <p>Thu, 20 Jun 2024 1:01:23</p>
+              </div>
+              <div>
+                <h3>Load End</h3>
+                <p>Thu, 20 Jun 2024 1:06:14</p>
+              </div>
+              <div>
+                <h3>Total Time (10-3 sec)</h3>
+                <p>3.37</p>
+              </div>
+            </div>
+          </div>
+          <div class="ButtonGroup Dialog-buttons">
+            <button class="Button Dialog-button" type="button">
+              <i class="Icon fas fa-times"></i>Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

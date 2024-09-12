@@ -1,0 +1,760 @@
+@import 'normalize';
+@import 'fonts';
+@import 'fontawesome-all';
+@import 'google';
+
+@mixin plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin contained {
+  width: 90rem;
+  max-width: calc(100vw - 4rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin wide {
+  max-width: unset;
+  width: calc(100vw - 6rem);
+}
+
+@mixin vertical-element {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@mixin vertical-group {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@mixin shadow {
+  box-shadow: 2px 2px 2px 0 rgba(#000, 0.04);
+}
+
+@mixin flex-horz {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-vert {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin code {
+  background: rgba(#000, 0.05);
+  color: #000;
+  font-size: 1.4rem;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  background: #f7f7f7;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  color: #383838;
+  font-size: 1.6rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.3;
+}
+
+.Logo-img {
+  height: 2rem;
+}
+
+.Header {
+  @include flex-horz;
+  @include shadow;
+  padding: 2rem 3rem;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.Precog {
+  @include flex-vert;
+  min-height: 100vh;
+}
+
+a {
+  color: #5a43c9;
+}
+
+.Page {
+  padding-bottom: 6rem;
+}
+
+.Page--hidden {
+  display: none;
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(#000, 0.1);
+  border-radius: 4px;
+  padding: 0 0.6em;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  white-space: nowrap;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-weight: 500;
+  text-decoration: none;
+  color: #383838;
+  box-sizing: border-box;
+  vertical-align: middle;
+  outline: 0;
+  @include shadow;
+
+  &:disabled {
+    background: rgba(250, 250, 250, 0.5);
+    color: #bdbfc0;
+    cursor: default;
+  }
+
+  &:not(:disabled):hover, &:not(:disabled):focus {
+    border-color: rgba(#5a43c9, 0.5);
+    color: #5a43c9;
+  }
+
+  &:not(:disabled):active {
+    background: rgba(0, 0, 0, 0.05);
+    color: #383838;
+  }
+}
+
+.Button--active {
+  background: #535057;
+  border-color: transparent;
+  color: #fff;
+
+  &:not(:disabled):hover, &:not(:disabled):focus {
+    background: #3E3C41;
+    border-color: transparent;
+  }
+
+  &:not(:disabled):active {
+    background: #2A282C;
+    color: #fff;
+  }
+}
+
+.Input {
+  @include shadow;
+  flex: 1 1 auto;
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 0.75em;
+  border: 0;
+  background: #fff;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:disabled {
+    background: #f5f5f6;
+    color: #999;
+  }
+
+  &::placeholder {
+    color: rgba(#000, 0.3);
+  }
+}
+
+.Select {
+  position: relative;
+  display: inline-block;
+}
+
+.Select-select {
+  height: 3.5rem;
+
+  padding: 0 3.5rem 0 1.2rem;
+  border: 0;
+  @include shadow;
+  box-shadow: 0px 1px 2px rgba(#000, 0.2);
+  background: #fff;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+
+  &:disabled {
+    background: #f5f5f6;
+    color: #999;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.Select-icon {
+  position: absolute;
+  top: 0px;
+  right: 0.5rem;
+  line-height: 3.5rem;
+  pointer-events: none;
+}
+
+.Select+.Select {
+  margin-left: 0.5em;
+}
+
+.Options {
+  @include plain-list;
+  @include vertical-group;
+}
+
+.Options-item+.Options-item {
+  margin-top: 1.6rem;
+}
+
+.Option-checkbox {
+  margin-right: 1rem;
+  position: relative;
+  top: 0.1rem;
+}
+
+.Option {
+  display: flex;
+  align-items: baseline;
+}
+
+.Option-labelTitle {
+  font-weight: bold;
+}
+
+.Option-labelDescription {
+  margin-top: 0.6rem;
+  font-size: 85%;
+}
+
+.Container {
+  @include contained;
+  @include vertical-group;
+}
+
+.Container--wide {
+  @include wide;
+}
+
+.ButtonGroup {
+  @include plain-list;
+  .Button+.Button {
+    margin-left: 0.5rem;
+  }
+}
+
+.BoxList {
+  @include plain-list;
+  @include vertical-element;
+
+  .Box+.Box {
+    margin-top: 1rem;
+  }
+}
+
+.Box {
+  @include flex-horz;
+  @include shadow;
+  background: #fff;
+  padding: 2rem;
+  border: 0;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  min-height: 7.5rem;
+}
+
+.Box-group {
+  @include flex-horz;
+}
+
+.Box-title {
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.Box-field {
+  margin-right: 1rem;
+  flex-grow: 1;
+}
+
+.Box-input {
+  box-shadow: 1px 1px 2px 1px rgba(#000, 0.08);
+}
+
+.Box-logo {
+  font-size: 3rem;
+}
+
+.Box-checkbox {
+  margin-right: 1rem;
+}
+
+.Box-actions {
+  margin-left: 0.5rem;
+  text-align: right;
+}
+
+.StatusLine {
+  font-size: 1.3rem;
+  flex-grow: 1;
+  margin-top: 0.3rem;
+}
+
+.Icon {
+  opacity: 0.5;
+  margin-right: 0.4em;
+}
+
+.Icon-logoPlaceholder {
+  width: 6rem;
+  height: 4.2rem;
+  line-height: 4.2rem;
+  margin-right: 1.4rem;
+  font-size: 3.5rem;
+}
+
+.LogoIcon {
+  width: 6rem;
+  height: 4.2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 1.4rem;
+}
+
+.Loading {
+  @include contained;
+  @include flex-vert;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 14rem);
+}
+
+#init {
+  height: 100%;
+}
+
+.Loading-icon {
+  font-size: 200%;
+  opacity: 0.2;
+}
+
+.Loading-text {
+  margin-top: 1rem;
+}
+
+.LogWindow {
+  @include shadow;
+  @include contained;
+  @include wide;
+  margin: 2rem;
+  padding: 1rem;
+  overflow: auto;
+  background: #fff;
+  height: calc(100vh - 32rem);
+  min-height: 15rem;
+}
+
+.Field {
+  @include vertical-element;
+  display: block;
+}
+
+.Field-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.Field-description {
+  margin-bottom: 0.5rem;
+}
+
+
+
+.Group {
+  @include vertical-group;
+}
+
+.SearchFilter {
+  @include vertical-element;
+  position: relative;
+}
+
+.SearchFilter-icon {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  line-height: 3.6rem;
+}
+
+.SearchFilter-input {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.SearchFilter-clearButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  height: 3.5rem;
+  line-height: 3.6rem;
+}
+
+.ChoiceBoxes {
+  display: flex;
+  justify-content: center;
+}
+
+.ChoiceBox {
+  @include shadow;
+  background: #fff;
+  width: 48%;
+  height: 40rem;
+  min-height: 25rem;
+  max-height: calc(100vh - 25rem);
+
+  & + .ChoiceBox {
+    margin-left: 3.5rem;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ChoiceBox-icon {
+  display: flex;
+  align-items: center;
+  font-size: 5rem;
+  flex-grow: 1;
+  max-height: 80%;
+
+  .Icon {
+    margin: 0;
+    background: #5a43c9;
+    color: #fff;
+    padding: 3rem;
+    border-radius: 100%;
+  }
+}
+
+.ChoiceBox-button {
+  margin-top: -3rem;
+}
+
+.Container .Container {
+  border: 1px solid red;
+}
+
+.StartError {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  padding: 1rem 0 6.4rem;
+}
+
+.StartError-actions {
+  @include plain-list;
+  margin-top: 2rem;
+
+  li+li {
+    margin-top: 1rem;
+  }
+}
+
+.DialogContainer {
+  position: fixed;
+  background: rgba(#000, 0.5);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Dialog {
+  box-shadow: 2px 2px 32px 0 rgba(#000, 0.25);
+  background: #fff;
+  width: 60rem;
+  padding: 2.4rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(95vh - 2.4rem * 2);
+}
+
+.Dialog-title {
+  margin: 0;
+  font-size: 180%;
+}
+
+.Dialog-content {
+  overflow: auto;
+  margin: 1.6rem 0;
+
+  >p:first-child {
+    margin-top: 0;
+  }
+  >p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Dialog-buttons {
+  text-align: right;
+}
+
+.Dialog-error {
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
+
+.FormError {
+  @include vertical-element;
+  background: rgba(red, 0.1);
+  border: 1px solid rgba(red, 0.25);
+  border-radius: 0.5rem;
+  padding: 1.3rem 1.6rem;
+  color: #990000;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: #660000;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.FormError-icon {
+  font-size: 150%;
+}
+
+.Schedule-input {
+  font-family: monospace;
+  font-size: 85%;
+}
+
+.DatasetSelection-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DatasetSelection-button {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.DatasetSelection-button:first-child {
+  text-align: left;
+}
+
+.DatasetSelection-button:last-child {
+  text-align: right;
+}
+
+.ScheduleEntryEdit {
+  margin-top: -1.5rem;
+}
+
+.ScheduleEntryEdit-advancedButton {
+  align-self: flex-start;
+}
+
+.ScheduleEntryEdit-words {
+  margin: 0 1rem;
+}
+
+p+.ScheduleEntryEdit-words {
+  margin-left: 0;
+}
+
+.Upload-file {
+  display: none;
+}
+
+.DestinationCreate-scope+.DestinationCreate-scope {
+  margin-left: 0.25em;
+}
+
+.KindList-items-filterPending {
+  opacity: 0.5;
+}
+
+.TrialCountdown {
+  @include contained;
+  @include shadow;
+  margin: 3.2rem auto 0;
+  background: rgba(#5a43c9, 0.15);
+  border: 1px solid rgba(#5a43c9, 0.1);
+  padding: 1.2rem;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: #1d0f95;
+  text-align: center;
+  animation-duration: 0.5s;
+  animation-name: fade-in;
+}
+
+.Button--subscribe {
+  background: #5a43c9;
+  color: rgba(#fff, 0.9);
+  margin-left: 2rem;
+  box-shadow: none;
+  border: none;
+}
+
+.Button--subscribe:not(:disabled):hover {
+  color: #fff;
+  background: #3d2ab3;
+}
+
+.Button--subscribe:not(:disabled):focus {
+  color: #fff;
+  background: #3d2ab3;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Instructions {
+  @include vertical-group;
+}
+
+.InstructionList {
+  @include vertical-group;
+  @include plain-list;
+  counter-reset: instruction-counter;
+  padding-left: 0rem;
+}
+
+.InstructionList-item {
+  counter-increment: instruction-counter;
+  line-height: 2rem;
+  position: relative;
+}
+
+.InstructionList-item::before {
+  content: counter(instruction-counter);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(#000, 0.05);
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  position: absolute;
+  top: -0.3rem;
+  left: 0;
+}
+
+.InstructionList-item {
+  padding-left: 3.4rem;
+
+  &+.InstructionList-item {
+    margin-top: 1.2rem;
+  }
+}
+
+code {
+  @include code;
+  display: inline-block;
+  padding: 0 0.2em;
+  border-radius: 0.4rem;
+}
+
+.CodeBlock {
+  position: relative;
+}
+
+.CodeBlock-code {
+  @include code;
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: 1.2;
+}
+
+.CodeBlock-copyButton {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.ErrorBox {
+  @include contained;
+  @include vertical-group;
+  @include shadow;
+  background: #fff;
+  display: flex;
+}
+
+.ErrorBox-title {
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.ErrorBox-icon {
+  background: #5a43c9;
+  flex-shrink: 0;
+  width: 3.6rem;
+  padding-top: 1.6rem;
+  text-align: center;
+  margin-right: 0;
+  opacity: 1;
+  color: #fff;
+}
+
+.ErrorBox-content {
+  flex-grow: 1;
+  padding: 1.6rem;
+  border-left: 0;
+}
+
+.ErrorBox-details p:last-child {
+  margin-bottom: 0;
+}

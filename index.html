@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precog Source UI</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Page">
+      <div class="PipelineViewPage">
+        <div class="Container">
+          <h1>Pipeline: git datasets</h1>
+          <div class="ButtonGroup">
+            <button class="Button" type="button">
+              <i class="Icon fas fa-play"></i>Start load</button
+            ><button class="Button" type="button">
+              <i class="Icon far fa-trash-alt"></i>Delete
+            </button>
+          </div>
+        </div>
+        <div class="Container">
+          <h2>Destination</h2>
+          <p>
+            <strong>Snowflake</strong>, Snowflake at
+            as55502.us-east-2.aws:aspencer:aspencer
+          </p>
+          <div class="ButtonGroup">
+            <a
+              class="Button"
+              href="#/destination/b2e5d45b-1864-4da8-b3e6-79edda65b218?pipeline=dda36b1d-6125-417c-91ea-47a2dffb6bc9"
+              ><i class="Icon fas fa-wrench"></i>Edit destination</a
+            >
+          </div>
+        </div>
+        <div class="Container">
+          <h2>Datasets</h2>
+          <div class="ButtonGroup">
+            <a
+              class="Button"
+              href="#/pipeline/dda36b1d-6125-417c-91ea-47a2dffb6bc9/datasets/add"
+              ><i class="Icon fas fa-plus"></i>Add datasets</a
+            ><a
+              class="Button"
+              href="#/pipeline/dda36b1d-6125-417c-91ea-47a2dffb6bc9/datasets/reload"
+              ><i class="Icon fas fa-sync-alt"></i>Reload datasets</a
+            ><a
+              class="Button"
+              href="#/pipeline/dda36b1d-6125-417c-91ea-47a2dffb6bc9/datasets/remove"
+              ><i class="Icon fas fa-minus"></i>Remove datasets</a
+            ><a
+              class="Button"
+              href="#/pipeline/dda36b1d-6125-417c-91ea-47a2dffb6bc9/datasets/report"
+              ><i class="Icon fas fa-exclamation"></i>Report data issues</a
+            >
+          </div>
+        </div>
+        <div class="Container"><h2>Available datasets</h2></div>
+        <div class="Container">
+          <p><strong>GitHub</strong>, precog</p>
+          <div class="ButtonGroup">
+            <a
+              class="Button"
+              href="#/source/eea3c20a-0457-4efa-a8b7-4709488b6800?pipeline=dda36b1d-6125-417c-91ea-47a2dffb6bc9"
+              ><i class="Icon fas fa-wrench"></i>Edit source</a
+            >
+          </div>
+          <div class="BoxList">
+            <li class="Box">
+              <span class="Box-title">Issue Comments</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:05:49 UTC"
+                  >Thu, 20 Jun 2024 01:05:49</span
+                >
+                91.4 MB at rate of 10mbps with 232 MB total data loaded</span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Issues</span
+              ><span class="StatusLine"
+                ><code>Writing completed</code>
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:06:14 UTC"
+                  >Thu, 20 Jun 2024 01:06:14 - rate: 10MB/sec - total: 232
+                  MB</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Projects V2</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:05:09 UTC"
+                  >Thu, 20 Jun 2024 01:05:09</span
+                ></span
+              >
+
+              <div class="ButtonGroup Box-actions">
+                <a class="Button button" type="button" href="resolve-info.html"
+                  ><i class="Icon fas fa-info-circle"></i>Reported</a
+                >
+                <a class="Button button" href="data-info.html">Data log</a>
+              </div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Projects V2 Items</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:07:33 UTC"
+                  >Thu, 20 Jun 2024 01:07:33</span
+                >
+              </span>
+              <div class="ButtonGroup Box-actions">
+                <a class="Button button" href="data-info.html">Data log</a>
+              </div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Pull Request Comments</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:06:39 UTC"
+                  >Thu, 20 Jun 2024 01:06:39</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Pull Requests</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:06:09 UTC"
+                  >Thu, 20 Jun 2024 01:06:09</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Repositories</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:04:38 UTC"
+                  >Thu, 20 Jun 2024 01:04:38</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Team Members</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:05:14 UTC"
+                  >Thu, 20 Jun 2024 01:05:14</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Teams</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:04:47 UTC"
+                  >Thu, 20 Jun 2024 01:04:47</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+            <li class="Box">
+              <span class="Box-title">Users</span
+              ><span class="StatusLine"
+                >Writing completed at
+                <span
+                  class="TimestampDisplay"
+                  title="Thu, 20 Jun 2024 07:04:37 UTC"
+                  >Thu, 20 Jun 2024 01:04:37</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+          </div>
+        </div>
+        <div class="Container">
+          <h2>Schedule</h2>
+          <div class="Schedule">
+            <p>This pipeline is currently not loading on a schedule.</p>
+            <div class="ButtonGroup">
+              <button class="Button" type="button">
+                <i class="Icon fas fa-plus"></i>Add schedule
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
