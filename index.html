@@ -11,6 +11,21 @@
     <link rel="stylesheet" href="./scss/google.css" />
   </head>
   <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="pipeline-data-log.html"
+          ><i class="Icon fas fa-table"></i>Pipeline data log</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
     <div class="Page">
       <div class="PipelineViewPage">
         <div class="Container">
@@ -21,6 +36,9 @@
             ><button class="Button" type="button">
               <i class="Icon far fa-trash-alt"></i>Delete
             </button>
+            <a class="Button button" href="pipeline-data-log.html"
+              ><i class="Icon fas fa-table"></i>Pipeline data log</a
+            >
           </div>
         </div>
         <div class="Container">
@@ -57,6 +75,9 @@
               href="#/pipeline/dda36b1d-6125-417c-91ea-47a2dffb6bc9/datasets/report"
               ><i class="Icon fas fa-exclamation"></i>Report data issues</a
             >
+            <a class="Button button" href="pipeline-data-log.html"
+              ><i class="Icon fas fa-table"></i>Dataset data log</a
+            >
           </div>
         </div>
         <div class="Container"><h2>Available datasets</h2></div>
@@ -90,7 +111,7 @@
                 <span
                   class="TimestampDisplay"
                   title="Thu, 20 Jun 2024 07:06:14 UTC"
-                  >Thu, 20 Jun 2024 01:06:14 - rate: 10MB/sec - total: 232
+                  >Thu, 20 Jun 2024 01:06:14 | rate: 10MB/sec | total: 232
                   MB</span
                 ></span
               >
@@ -111,7 +132,9 @@
                 <a class="Button button" type="button" href="resolve-info.html"
                   ><i class="Icon fas fa-info-circle"></i>Reported</a
                 >
-                <a class="Button button" href="data-info.html">Data log</a>
+                <a class="Button button" href="data-log.html"
+                  ><i class="Icon fas fa-table"></i>Data log</a
+                >
               </div>
             </li>
             <li class="Box">
@@ -125,7 +148,9 @@
                 >
               </span>
               <div class="ButtonGroup Box-actions">
-                <a class="Button button" href="data-info.html">Data log</a>
+                <a class="Button button" href="data-log.html"
+                  ><i class="Icon fas fa-table"></i>Data log</a
+                >
               </div>
             </li>
             <li class="Box">
@@ -203,9 +228,51 @@
           </div>
         </div>
         <div class="Container">
+          <h2>Pending datasets</h2>
+          <p>
+            These datasets will be loaded into Snowflake at the first load after
+            historical data has been read into Precog.
+          </p>
+        </div>
+        <div class="Container">
+          <p><strong>Google Ads</strong>, SpencerProject-no dev token</p>
+          <div class="ButtonGroup">
+            <a
+              class="Button"
+              href="#/source/b3fa4ff8-0d8c-4198-b799-e09d8f60ac24?pipeline=ccd4cd82-42b4-407a-9b95-b18736824583"
+              ><i class="Icon fas fa-wrench"></i>Edit source</a
+            >
+          </div>
+          <div class="BoxList">
+            <li class="Box">
+              <span class="Box-title">Ad Groups</span
+              ><span class="StatusLine"
+                >Dataset was found to be empty at
+                <span
+                  class="TimestampDisplay"
+                  title="Mon, 29 Jul 2024 22:43:10 UTC"
+                  >Mon, 29 Jul 2024 16:43:10</span
+                ></span
+              >
+              <div class="ButtonGroup Box-actions"></div>
+            </li>
+          </div>
+        </div>
+        <div class="Container">
           <h2>Schedule</h2>
           <div class="Schedule">
-            <p>This pipeline is currently not loading on a schedule.</p>
+            <div class="BoxList">
+              <li class="Box">
+                <span class="Box-title">Once a day at 0:00 UTC</span>
+                <div class="ButtonGroup Box-actions">
+                  <button class="Button" type="button">
+                    <i class="Icon fas fa-wrench"></i>Edit</button
+                  ><button class="Button" type="button">
+                    <i class="Icon far fa-trash-alt"></i>Delete
+                  </button>
+                </div>
+              </li>
+            </div>
             <div class="ButtonGroup">
               <button class="Button" type="button">
                 <i class="Icon fas fa-plus"></i>Add schedule
