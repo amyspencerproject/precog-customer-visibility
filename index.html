@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Precog Source UI</title>
+    <title>Load History Mock-Up</title>
     <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
     <link rel="stylesheet" href="./scss/main.css" />
     <link rel="stylesheet" href="./scss/fonts.css" />
@@ -16,11 +16,8 @@
         <img class="Logo-img" src="img/precog-logo.png" />
       </div>
       <div class="ButtonGroup">
-        <a class="Button button" href="new-connection.html"
-          ><i class="Icon fas fa-plus-square"></i>New Connection</a
-        >
-        <a class="Button button" href="full-data-log.html"
-          ><i class="Icon fas fa-table"></i>Data log</a
+        <a class="Button button" href="load-history-full.html"
+          ><i class="Icon fas fa-table"></i>Load History</a
         >
         <button class="Button">
           <i class="Icon fas fa-user-circle"></i>My subscription</button
@@ -39,9 +36,6 @@
             ><button class="Button" type="button">
               <i class="Icon far fa-trash-alt"></i>Delete
             </button>
-            <a class="Button button" href="pipeline-data-log.html"
-              ><i class="Icon fas fa-table"></i>Pipeline data log</a
-            >
           </div>
         </div>
         <div class="Container">
@@ -78,9 +72,6 @@
               href="#/pipeline/dda36b1d-6125-417c-91ea-47a2dffb6bc9/datasets/report"
               ><i class="Icon fas fa-exclamation"></i>Report data issues</a
             >
-            <a class="Button button" href="pipeline-data-log.html"
-              ><i class="Icon fas fa-table"></i>Dataset data log</a
-            >
           </div>
         </div>
         <div class="Container"><h2>Available datasets</h2></div>
@@ -100,22 +91,20 @@
                 >Writing completed at
                 <span
                   class="TimestampDisplay"
-                  title="Thu, 20 Jun 2024 07:05:49 UTC"
+                  title="Thu, 20 Jun 2024 07:05:09 UTC"
                   >Thu, 20 Jun 2024 01:05:49</span
-                >
-                91.4 MB at rate of 10mbps with 232 MB total data loaded</span
+                ></span
               >
               <div class="ButtonGroup Box-actions"></div>
             </li>
             <li class="Box">
               <span class="Box-title">Issues</span
               ><span class="StatusLine"
-                ><code>Writing completed</code>
+                >Writing completed
                 <span
                   class="TimestampDisplay"
                   title="Thu, 20 Jun 2024 07:06:14 UTC"
-                  >Thu, 20 Jun 2024 01:06:14 | rate: 10MB/sec | total: 232
-                  MB</span
+                  >Thu, 20 Jun 2024 01:06:14</span
                 ></span
               >
               <div class="ButtonGroup Box-actions"></div>
@@ -135,9 +124,6 @@
                 <a class="Button button" type="button" href="resolve-info.html"
                   ><i class="Icon fas fa-info-circle"></i>Reported</a
                 >
-                <a class="Button button" href="data-log.html"
-                  ><i class="Icon fas fa-table"></i>Data log</a
-                >
               </div>
             </li>
             <li class="Box">
@@ -150,11 +136,7 @@
                   >Thu, 20 Jun 2024 01:07:33</span
                 >
               </span>
-              <div class="ButtonGroup Box-actions">
-                <a class="Button button" href="data-log.html"
-                  ><i class="Icon fas fa-table"></i>Data log</a
-                >
-              </div>
+              <div class="ButtonGroup Box-actions"></div>
             </li>
             <li class="Box">
               <span class="Box-title">Pull Request Comments</span

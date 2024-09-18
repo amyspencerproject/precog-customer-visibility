@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precog Source UI</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Header">
+      <div class="Logo">
+        <img class="Logo-img" src="img/precog-logo.png" />
+      </div>
+      <div class="ButtonGroup">
+        <a class="Button button" href="new-connection.html"
+          ><i class="Icon fas fa-plus-square"></i>New Connection</a
+        >
+        <a class="Button button" href="full-data-log.html"
+          ><i class="Icon fas fa-table"></i>Data log</a
+        >
+        <button class="Button">
+          <i class="Icon fas fa-user-circle"></i>My subscription</button
+        ><button class="Button">
+          <i class="Icon fas fa-sign-out-alt"></i>Log out
+        </button>
+      </div>
+    </div>
+    <div class="Page">
+      <div class="PipelineCreatePage">
+        <div class="DatasetSelection">
+          <div class="Container">
+            <h1>Which datasets do you want?</h1>
+            <div class="Group">
+              <button class="Button" type="button">
+                <i class="Icon fas fa-arrow-left"></i>Back
+              </button>
+            </div>
+          </div>
+          <div class="DatasetSelection">
+            <div class="Container">
+              <div class="DatasetSelection-buttons">
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon far fa-square"></i>Select all
+                  </button>
+                </div>
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon fas fa-sync-alt"></i>Refresh datasets
+                  </button>
+                </div>
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button" disabled="">
+                    <i class="Icon fas fa-arrow-right"></i>Continue with
+                    selection
+                  </button>
+                </div>
+              </div>
+              <form class="SearchFilter">
+                <i class="Icon fas fa-search SearchFilter-icon"></i
+                ><input class="Input SearchFilter-input" />
+              </form>
+              <div class="BoxList">
+                <label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Accounts</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Ad Groups</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Ads</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Age Demographics</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Audiences</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Campaigns</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Extensions</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Gender Demographics</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Locations</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Search Keywords</span
+                    >
+                  </div></label
+                ><label class="Box"
+                  ><div class="Box-group">
+                    <input class="Box-checkbox" type="checkbox" /><span
+                      class="Box-title"
+                      >Search Terms</span
+                    >
+                  </div></label
+                >
+              </div>
+              <div class="DatasetSelection-buttons">
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon far fa-square"></i>Select all
+                  </button>
+                </div>
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button">
+                    <i class="Icon fas fa-sync-alt"></i>Refresh datasets
+                  </button>
+                </div>
+                <div class="DatasetSelection-button">
+                  <button class="Button" type="button" disabled="">
+                    <i class="Icon fas fa-arrow-right"></i>Continue with
+                    selection
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
