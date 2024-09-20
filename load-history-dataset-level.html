@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customer Form Example</title>
+    <title>Load History Mock-Up</title>
     <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
     <link rel="stylesheet" href="./scss/main.css" />
     <link rel="stylesheet" href="./scss/_fonts.css" />
@@ -14,22 +14,41 @@
     <div class="Page">
       <!-- once the button is selected this dialog opens in the UI -->
       <div class="DialogContainer">
-        <div class="Dialog">
+        <div class="load-history-Dialog">
           <h1 class="Dialog-title">Data log: {{DataSet 1}}</h1>
           <div class="Dialog-content">
-            <div class="data-log-container">
-              <div>
-                <h3>Load Start</h3>
-                <p>Thu, 20 Jun 2024 1:01:23</p>
-              </div>
-              <div>
-                <h3>Load End</h3>
-                <p>Thu, 20 Jun 2024 1:06:14</p>
-              </div>
-              <div>
-                <h3>Total Time (10-3 sec)</h3>
-                <p>3.37</p>
-              </div>
+            <div class="load-history-container">
+              <table>
+                <colgroup>
+                  <col />
+                  <col />
+                  <col />
+                </colgroup>
+                <tr>
+                  <th>Pipeline</th>
+                  <th>Connection</th>
+                  <th>Data Set</th>
+                  <th>Data Load Complete</th>
+                </tr>
+                <tr>
+                  <td>Daily Activity Download</td>
+                  <td>Google Ads</td>
+                  <td>Accounts</td>
+                  <td>Thu, 20 Jun 2024 01:05:49</td>
+                </tr>
+                <tr>
+                  <td>Daily Activity Download</td>
+                  <td>Google Ads</td>
+                  <td>Accounts</td>
+                  <td>Thu, 20 Jun 2024 01:05:49</td>
+                </tr>
+                <tr>
+                  <td>Daily Activity Download</td>
+                  <td>Google Ads</td>
+                  <td>Accounts</td>
+                  <td>Thu, 20 Jun 2024 01:05:49</td>
+                </tr>
+              </table>
             </div>
           </div>
           <div class="ButtonGroup Dialog-buttons">

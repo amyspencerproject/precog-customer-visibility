@@ -4763,12 +4763,83 @@ p {
 /* Amy Styles for Customer Visibility Mockup *********** */
 
 .load-history-container {
+  width: 100%;
   /* display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start; */
 }
 
+/* .DialogContainer {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.load-history-Dialog {
+  box-shadow: 2px 2px 32px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  width: 100rem;
+  padding: 2.4rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(95vh - 4.8rem);
+}
+
+/* .Dialog-title {
+  margin: 0;
+  font-size: 180%;
+} */
+
+/* .Dialog-content {
+  overflow: auto;
+  margin: 1.6rem 0;
+} */
+/* .Dialog-content > p:first-child {
+  margin-top: 0;
+} */
+/* .Dialog-content > p:last-child {
+  margin-bottom: 0;
+} */
+
+/* .Dialog-buttons {
+  text-align: right;
+} */
+
+/* .Dialog-error {
+  font-size: 0.8rem;
+  overflow-x: auto;
+} */
+
+table,
+th,
+td {
+  border: 1px solid #5a43c9;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 10px;
+}
+th {
+  background-color: #dcd7f4;
+}
+colgroup {
+  width: 250px;
+}
+
+.pipeline-header {
+  display: none;
+  visibility: hidden;
+}
 /* End of Amy Styles for Customer Visibility Mockup *********/
+
 .Logo-img {
   height: 2rem;
 }
