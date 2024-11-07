@@ -4821,6 +4821,7 @@ table,
 th,
 td {
   border: 1px solid #5a43c9;
+  /* border: none; */
   border-collapse: collapse;
   background-color: white;
 }
@@ -4834,6 +4835,11 @@ th {
 td {
   font-size: 1.25rem;
 }
+
+.table-no-border {
+  border: none;
+}
+
 colgroup {
   width: 250px;
 }
