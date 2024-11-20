@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"ltyH2":[function(require,module,exports,__globalThis) {
+})({"4V53V":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "933d9c51a521242b";
+module.bundle.HMR_BUNDLE_ID = "c481430e2a01d320";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -584,39 +584,59 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"7Jfkl":[function(require,module,exports,__globalThis) {
+},{}],"7WR2a":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
 var _api = require("./api");
 (async function() {
-    const data = await (0, _api.getAquisitionsByYear)();
-    new (0, _autoDefault.default)(document.getElementById("acquisitions"), {
-        type: "bar",
+    const data = await (0, _api.getDimensions)();
+    new (0, _autoDefault.default)(document.getElementById("dimensions"), {
+        type: "bubble",
         options: {
-            animation: false,
-            plugins: {
-                legend: {
-                    display: false
+            aspectRatio: 1,
+            scales: {
+                x: {
+                    max: 500
                 },
-                tooltip: {
-                    enabled: false
+                y: {
+                    max: 500
                 }
             }
         },
         data: {
-            labels: data.map((row)=>row.year),
+            labels: data.map((x)=>x.year),
             datasets: [
                 {
-                    label: "Acquisitions by year",
-                    data: data.map((row)=>row.count)
+                    label: "width = height",
+                    data: data.filter((row)=>row.width === row.height).map((row)=>({
+                            x: row.width,
+                            y: row.height,
+                            r: row.count
+                        }))
+                },
+                {
+                    label: "width > height",
+                    data: data.filter((row)=>row.width > row.height).map((row)=>({
+                            x: row.width,
+                            y: row.height,
+                            r: row.count
+                        }))
+                },
+                {
+                    label: "width < height",
+                    data: data.filter((row)=>row.width < row.height).map((row)=>({
+                            x: row.width,
+                            y: row.height,
+                            r: row.count
+                        }))
                 }
             ]
         }
     });
 })();
 
-},{"chart.js/auto":"d8NN9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./api":"8Zgej"}],"d8NN9":[function(require,module,exports,__globalThis) {
+},{"chart.js/auto":"d8NN9","./api":"8Zgej","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d8NN9":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _chartJs = require("../dist/chart.js");
@@ -20094,6 +20114,6 @@ var global = arguments[3];
     }
 })(typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : this);
 
-},{}]},["ltyH2","7Jfkl"], "7Jfkl", "parcelRequire94c2")
+},{}]},["4V53V","7WR2a"], "7WR2a", "parcelRequire94c2")
 
-//# sourceMappingURL=index.a521242b.js.map
+//# sourceMappingURL=index.2a01d320.js.map
