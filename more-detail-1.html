@@ -28,9 +28,11 @@
     </div>
     <div class="Page">
       <div class="Container">
+        <p><strong>{Source}</strong> is currently rate limiting Precog.</p>
+        <p>Regular data loading will resume at 00:00 UTC.</p>
         <p>
-          UKG Pro is currently rate limiting us, continuing at 00:00 UTC, UKG
-          Pro has rate limited us for 26 hours total
+          <strong>{Source}</strong> has rate limited your data from loading into
+          or throught Precog for 26 hours total
         </p>
         <div class="Chart">
           <div>
@@ -123,9 +125,11 @@
                   y: {
                     beginAtZero: true,
                     grid: { color: "#d9d9d9" },
+                    title: { display: true, text: "Minutes of Rate Limiting" },
                   },
                   x: {
                     grid: { display: false },
+                    title: { display: true, text: "Date and hour" },
                   },
                 },
               },
