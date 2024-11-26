@@ -39,6 +39,10 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <script>
+          Chart.defaults.backgroundColor = "rgba(90, 67, 201, 0.5)";
+          Chart.defaults.borderColor = "#5a43c9";
+          Chart.defaults.color = "#383838";
+
           const bar = document.getElementById("barChart");
           const rateLimitMins = [
             1, 1, 1, 1, 6, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
@@ -115,7 +119,9 @@
               scales: {
                 y: {
                   beginAtZero: true,
+                  grid: { color: "#d9d9d9" },
                 },
+                x: { grid: { display: false } },
               },
             },
           });

@@ -589,6 +589,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
 var _api = require("./api");
+// Chart.defaults.backgroundColor = "#9BD0F5";
+// Chart.defaults.borderColor = "#36A2EB";
+// Chart.defaults.color = "#000";
 (async function() {
     const data = await (0, _api.getDimensions)();
     new (0, _autoDefault.default)(document.getElementById("dimensions"), {
@@ -632,7 +635,8 @@ var _api = require("./api");
                         }))
                 }
             ]
-        }
+        },
+        plugins: []
     });
 })();
 

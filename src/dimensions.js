@@ -1,6 +1,10 @@
 import Chart from "chart.js/auto";
 import { getDimensions } from "./api";
 
+// Chart.defaults.backgroundColor = "#9BD0F5";
+// Chart.defaults.borderColor = "#36A2EB";
+// Chart.defaults.color = "#000";
+
 (async function () {
   const data = await getDimensions();
 
@@ -53,5 +57,6 @@ import { getDimensions } from "./api";
         },
       ],
     },
+    plugins: [],
   });
 })();

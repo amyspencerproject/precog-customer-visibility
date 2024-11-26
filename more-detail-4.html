@@ -27,38 +27,114 @@
       </div>
     </div>
     <div class="Page">
-      <div class="DialogContainer">
-        <div class="Dialog">
-          <h1 class="Dialog-title">Rate limiting total</h1>
-          <div class="Dialog-content">
-            <p>There is currently no rate limiting.</p>
-            <table>
-              <colgroup>
-                <col />
-                <col />
-                <col />
-              </colgroup>
-              <tr>
-                <th>Rate limiting started at</th>
-                <th>Rate limiting ended at</th>
-                <th>Rate limiting duration</th>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td>0 secs</td>
-              </tr>
-            </table>
+      <div class="Container">
+        <p>
+          UKG Pro is currently rate limiting us, continuing at 00:00 UTC, UKG
+          Pro has rate limited us for 26 hours total
+        </p>
+        <div class="Chart">
+          <div>
+            <canvas id="lineChart"></canvas>
+            <!-- Styles for the chart get applied to this div -->
           </div>
-          <div class="ButtonGroup Dialog-buttons">
-            <a
-              class="Button Dialog-button"
-              type="button"
-              href="load-history-full.html"
-            >
-              <i class="Icon fas fa-times"></i>Close
-            </a>
-          </div>
+
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+          <script>
+            Chart.defaults.backgroundColor = "rgba(90, 67, 201, 0.5)";
+            Chart.defaults.borderColor = "#5a43c9";
+            Chart.defaults.color = "#383838";
+
+            const ctx = document.getElementById("lineChart");
+            const rateLimitMins = [
+              1, 1, 1, 1, 6, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+              60, 60, 60, 60, 60, 60, 60, 0.6, 0.6, 0.6, 0.6, 6, 60, 60, 60, 60,
+              60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
+            ];
+            const hourDay = [
+              "2024/01/01 0:00",
+              "2024/01/01 1:00",
+              "2024/01/01 2:00",
+              "2024/01/01 3:00",
+              "2024/01/01 4:00",
+              "2024/01/01 5:00",
+              "2024/01/01 6:00",
+              "2024/01/01 7:00",
+              "2024/01/01 8:00",
+              "2024/01/01 9:00",
+              "2024/01/01 10:00",
+              "2024/01/01 11:00",
+              "2024/01/01 12:00",
+              "2024/01/01 13:00",
+              "2024/01/01 14:00",
+              "2024/01/01 15:00",
+              "2024/01/01 16:00",
+              "2024/01/01 17:00",
+              "2024/01/01 18:00",
+              "2024/01/01 19:00",
+              "2024/01/01 20:00",
+              "2024/01/01 21:00",
+              "2024/01/01 22:00",
+              "2024/01/01 23:00",
+              "2024/01/02 0:00",
+              "2024/01/02 1:00",
+              "2024/01/02 2:00",
+              "2024/01/02 3:00",
+              "2024/01/02 4:00",
+              "2024/01/02 5:00",
+              "2024/01/02 6:00",
+              "2024/01/02 7:00",
+              "2024/01/02 8:00",
+              "2024/01/02 9:00",
+              "2024/01/02 10:00",
+              "2024/01/02 11:00",
+              "2024/01/02 12:00",
+              "2024/01/02 13:00",
+              "2024/01/02 14:00",
+              "2024/01/02 15:00",
+              "2024/01/02 16:00",
+              "2024/01/02 17:00",
+              "2024/01/02 18:00",
+              "2024/01/02 19:00",
+              "2024/01/02 20:00",
+              "2024/01/02 21:00",
+              "2024/01/02 22:00",
+              "2024/01/02 23:00",
+              "2024/01/03 0:00",
+              "2024/01/03 1:00",
+            ];
+            // const {rateLimitMins} = require('/data.js');
+
+            new Chart(ctx, {
+              type: "line",
+              data: {
+                labels: hourDay,
+                datasets: [
+                  {
+                    label: "Rate Limiting",
+                    data: rateLimitMins,
+                    borderWidth: 1,
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  y: {
+                    // beginAtZero: true,
+                    // grid: { color: "#bdbfc0" },
+                    stacked: true,
+                    title: {
+                      display: true,
+                      text: "Value",
+                    },
+                  },
+                  x: {
+                    grid: { display: false },
+                  },
+                },
+              },
+            });
+          </script>
         </div>
       </div>
     </div>
