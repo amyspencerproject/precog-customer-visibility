@@ -1,9 +1,8 @@
-const rateLimitMins = [
+export const rateLimitMins = [
   1, 1, 1, 1, 6, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
   60, 60, 60, 60, 0.6, 0.6, 0.6, 0.6, 6, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
   60, 60, 60, 60, 60, 60, 60, 60, 60, 60,
 ];
-export { rateLimitMins };
 
 export const hourDay = [
   "2024/01/01 0:00",
@@ -57,4 +56,3 @@ export const hourDay = [
   "2024/01/03 0:00",
   "2024/01/03 1:00",
 ];
-export { hourDay };
